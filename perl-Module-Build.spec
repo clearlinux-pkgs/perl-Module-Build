@@ -4,7 +4,7 @@
 #
 Name     : perl-Module-Build
 Version  : 0.4222
-Release  : 11
+Release  : 12
 URL      : http://search.cpan.org/CPAN/authors/id/L/LE/LEONT/Module-Build-0.4222.tar.gz
 Source0  : http://search.cpan.org/CPAN/authors/id/L/LE/LEONT/Module-Build-0.4222.tar.gz
 Summary  : 'Build and install Perl modules'
