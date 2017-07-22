@@ -4,7 +4,7 @@
 #
 Name     : perl-Module-Build
 Version  : 0.4224
-Release  : 13
+Release  : 14
 URL      : http://search.cpan.org/CPAN/authors/id/L/LE/LEONT/Module-Build-0.4224.tar.gz
 Source0  : http://search.cpan.org/CPAN/authors/id/L/LE/LEONT/Module-Build-0.4224.tar.gz
 Summary  : 'Build and install Perl modules'
@@ -72,29 +72,29 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files
 %defattr(-,root,root,-)
-/usr/lib/perl5/site_perl/5.24.0/Module/Build.pm
-/usr/lib/perl5/site_perl/5.24.0/Module/Build/API.pod
-/usr/lib/perl5/site_perl/5.24.0/Module/Build/Authoring.pod
-/usr/lib/perl5/site_perl/5.24.0/Module/Build/Base.pm
-/usr/lib/perl5/site_perl/5.24.0/Module/Build/Bundling.pod
-/usr/lib/perl5/site_perl/5.24.0/Module/Build/Compat.pm
-/usr/lib/perl5/site_perl/5.24.0/Module/Build/Config.pm
-/usr/lib/perl5/site_perl/5.24.0/Module/Build/ConfigData.pm
-/usr/lib/perl5/site_perl/5.24.0/Module/Build/Cookbook.pm
-/usr/lib/perl5/site_perl/5.24.0/Module/Build/Dumper.pm
-/usr/lib/perl5/site_perl/5.24.0/Module/Build/Notes.pm
-/usr/lib/perl5/site_perl/5.24.0/Module/Build/PPMMaker.pm
-/usr/lib/perl5/site_perl/5.24.0/Module/Build/Platform/Default.pm
-/usr/lib/perl5/site_perl/5.24.0/Module/Build/Platform/MacOS.pm
-/usr/lib/perl5/site_perl/5.24.0/Module/Build/Platform/Unix.pm
-/usr/lib/perl5/site_perl/5.24.0/Module/Build/Platform/VMS.pm
-/usr/lib/perl5/site_perl/5.24.0/Module/Build/Platform/VOS.pm
-/usr/lib/perl5/site_perl/5.24.0/Module/Build/Platform/Windows.pm
-/usr/lib/perl5/site_perl/5.24.0/Module/Build/Platform/aix.pm
-/usr/lib/perl5/site_perl/5.24.0/Module/Build/Platform/cygwin.pm
-/usr/lib/perl5/site_perl/5.24.0/Module/Build/Platform/darwin.pm
-/usr/lib/perl5/site_perl/5.24.0/Module/Build/Platform/os2.pm
-/usr/lib/perl5/site_perl/5.24.0/Module/Build/PodParser.pm
+/usr/lib/perl5/site_perl/5.26.0/Module/Build.pm
+/usr/lib/perl5/site_perl/5.26.0/Module/Build/API.pod
+/usr/lib/perl5/site_perl/5.26.0/Module/Build/Authoring.pod
+/usr/lib/perl5/site_perl/5.26.0/Module/Build/Base.pm
+/usr/lib/perl5/site_perl/5.26.0/Module/Build/Bundling.pod
+/usr/lib/perl5/site_perl/5.26.0/Module/Build/Compat.pm
+/usr/lib/perl5/site_perl/5.26.0/Module/Build/Config.pm
+/usr/lib/perl5/site_perl/5.26.0/Module/Build/ConfigData.pm
+/usr/lib/perl5/site_perl/5.26.0/Module/Build/Cookbook.pm
+/usr/lib/perl5/site_perl/5.26.0/Module/Build/Dumper.pm
+/usr/lib/perl5/site_perl/5.26.0/Module/Build/Notes.pm
+/usr/lib/perl5/site_perl/5.26.0/Module/Build/PPMMaker.pm
+/usr/lib/perl5/site_perl/5.26.0/Module/Build/Platform/Default.pm
+/usr/lib/perl5/site_perl/5.26.0/Module/Build/Platform/MacOS.pm
+/usr/lib/perl5/site_perl/5.26.0/Module/Build/Platform/Unix.pm
+/usr/lib/perl5/site_perl/5.26.0/Module/Build/Platform/VMS.pm
+/usr/lib/perl5/site_perl/5.26.0/Module/Build/Platform/VOS.pm
+/usr/lib/perl5/site_perl/5.26.0/Module/Build/Platform/Windows.pm
+/usr/lib/perl5/site_perl/5.26.0/Module/Build/Platform/aix.pm
+/usr/lib/perl5/site_perl/5.26.0/Module/Build/Platform/cygwin.pm
+/usr/lib/perl5/site_perl/5.26.0/Module/Build/Platform/darwin.pm
+/usr/lib/perl5/site_perl/5.26.0/Module/Build/Platform/os2.pm
+/usr/lib/perl5/site_perl/5.26.0/Module/Build/PodParser.pm
 
 %files bin
 %defattr(-,root,root,-)
