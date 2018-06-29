@@ -4,14 +4,14 @@
 #
 Name     : perl-Module-Build
 Version  : 0.4224
-Release  : 17
-URL      : http://search.cpan.org/CPAN/authors/id/L/LE/LEONT/Module-Build-0.4224.tar.gz
-Source0  : http://search.cpan.org/CPAN/authors/id/L/LE/LEONT/Module-Build-0.4224.tar.gz
+Release  : 18
+URL      : https://cpan.metacpan.org/authors/id/L/LE/LEONT/Module-Build-0.4224.tar.gz
+Source0  : https://cpan.metacpan.org/authors/id/L/LE/LEONT/Module-Build-0.4224.tar.gz
 Summary  : 'Build and install Perl modules'
 Group    : Development/Tools
 License  : Artistic-1.0-Perl
 Requires: perl-Module-Build-bin
-Requires: perl-Module-Build-doc
+Requires: perl-Module-Build-man
 
 %description
 NAME
@@ -22,17 +22,18 @@ Standard process for building & installing modules:
 %package bin
 Summary: bin components for the perl-Module-Build package.
 Group: Binaries
+Requires: perl-Module-Build-man
 
 %description bin
 bin components for the perl-Module-Build package.
 
 
-%package doc
-Summary: doc components for the perl-Module-Build package.
-Group: Documentation
+%package man
+Summary: man components for the perl-Module-Build package.
+Group: Default
 
-%description doc
-doc components for the perl-Module-Build package.
+%description man
+man components for the perl-Module-Build package.
 
 
 %prep
@@ -45,7 +46,7 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
 if test -f Makefile.PL; then
 %{__perl} Makefile.PL
-make V=1  %{?_smp_mflags}
+make  %{?_smp_mflags}
 else
 %{__perl} Build.PL
 ./Build
@@ -100,7 +101,26 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 %defattr(-,root,root,-)
 /usr/bin/config_data
 
-%files doc
+%files man
 %defattr(-,root,root,-)
-%doc /usr/share/man/man1/*
-%doc /usr/share/man/man3/*
+/usr/share/man/man1/config_data.1
+/usr/share/man/man3/Module::Build.3
+/usr/share/man/man3/Module::Build::API.3
+/usr/share/man/man3/Module::Build::Authoring.3
+/usr/share/man/man3/Module::Build::Base.3
+/usr/share/man/man3/Module::Build::Bundling.3
+/usr/share/man/man3/Module::Build::Compat.3
+/usr/share/man/man3/Module::Build::ConfigData.3
+/usr/share/man/man3/Module::Build::Cookbook.3
+/usr/share/man/man3/Module::Build::Notes.3
+/usr/share/man/man3/Module::Build::PPMMaker.3
+/usr/share/man/man3/Module::Build::Platform::Default.3
+/usr/share/man/man3/Module::Build::Platform::MacOS.3
+/usr/share/man/man3/Module::Build::Platform::Unix.3
+/usr/share/man/man3/Module::Build::Platform::VMS.3
+/usr/share/man/man3/Module::Build::Platform::VOS.3
+/usr/share/man/man3/Module::Build::Platform::Windows.3
+/usr/share/man/man3/Module::Build::Platform::aix.3
+/usr/share/man/man3/Module::Build::Platform::cygwin.3
+/usr/share/man/man3/Module::Build::Platform::darwin.3
+/usr/share/man/man3/Module::Build::Platform::os2.3
