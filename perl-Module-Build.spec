@@ -4,22 +4,22 @@
 #
 Name     : perl-Module-Build
 Version  : 0.4229
-Release  : 33
+Release  : 34
 URL      : https://cpan.metacpan.org/authors/id/L/LE/LEONT/Module-Build-0.4229.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/L/LE/LEONT/Module-Build-0.4229.tar.gz
-Summary  : Build, test, and install Perl modules
+Summary  : 'Build and install Perl modules'
 Group    : Development/Tools
 License  : Artistic-1.0-Perl
 Requires: perl-Module-Build-bin = %{version}-%{release}
 Requires: perl-Module-Build-man = %{version}-%{release}
+Requires: perl-Module-Build-perl = %{version}-%{release}
 BuildRequires : buildreq-cpan
 
 %description
-=head1 A GUIDE TO WRITING TESTS FOR MODULE::BUILD
-This document provides tips on writing new tests for Module::Build.  Please
-note that many existing tests were written prior to these guidelines and
-have many different styles.  Please don't copy/paste old tests by rote without
-considering better ways to test. See C<sample.t> for a starter test file.
+NAME
+Module::Build - Build and install Perl modules
+SYNOPSIS
+Standard process for building & installing modules:
 
 %package bin
 Summary: bin components for the perl-Module-Build package.
@@ -48,14 +48,24 @@ Group: Default
 man components for the perl-Module-Build package.
 
 
+%package perl
+Summary: perl components for the perl-Module-Build package.
+Group: Default
+Requires: perl-Module-Build = %{version}-%{release}
+
+%description perl
+perl components for the perl-Module-Build package.
+
+
 %prep
 %setup -q -n Module-Build-0.4229
+cd %{_builddir}/Module-Build-0.4229
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-export LANG=C
+export LANG=C.UTF-8
 if test -f Makefile.PL; then
 %{__perl} Makefile.PL
 make  %{?_smp_mflags}
@@ -65,7 +75,7 @@ else
 fi
 
 %check
-export LANG=C
+export LANG=C.UTF-8
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
@@ -85,29 +95,6 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.28.2/Module/Build.pm
-/usr/lib/perl5/vendor_perl/5.28.2/Module/Build/API.pod
-/usr/lib/perl5/vendor_perl/5.28.2/Module/Build/Authoring.pod
-/usr/lib/perl5/vendor_perl/5.28.2/Module/Build/Base.pm
-/usr/lib/perl5/vendor_perl/5.28.2/Module/Build/Bundling.pod
-/usr/lib/perl5/vendor_perl/5.28.2/Module/Build/Compat.pm
-/usr/lib/perl5/vendor_perl/5.28.2/Module/Build/Config.pm
-/usr/lib/perl5/vendor_perl/5.28.2/Module/Build/ConfigData.pm
-/usr/lib/perl5/vendor_perl/5.28.2/Module/Build/Cookbook.pm
-/usr/lib/perl5/vendor_perl/5.28.2/Module/Build/Dumper.pm
-/usr/lib/perl5/vendor_perl/5.28.2/Module/Build/Notes.pm
-/usr/lib/perl5/vendor_perl/5.28.2/Module/Build/PPMMaker.pm
-/usr/lib/perl5/vendor_perl/5.28.2/Module/Build/Platform/Default.pm
-/usr/lib/perl5/vendor_perl/5.28.2/Module/Build/Platform/MacOS.pm
-/usr/lib/perl5/vendor_perl/5.28.2/Module/Build/Platform/Unix.pm
-/usr/lib/perl5/vendor_perl/5.28.2/Module/Build/Platform/VMS.pm
-/usr/lib/perl5/vendor_perl/5.28.2/Module/Build/Platform/VOS.pm
-/usr/lib/perl5/vendor_perl/5.28.2/Module/Build/Platform/Windows.pm
-/usr/lib/perl5/vendor_perl/5.28.2/Module/Build/Platform/aix.pm
-/usr/lib/perl5/vendor_perl/5.28.2/Module/Build/Platform/cygwin.pm
-/usr/lib/perl5/vendor_perl/5.28.2/Module/Build/Platform/darwin.pm
-/usr/lib/perl5/vendor_perl/5.28.2/Module/Build/Platform/os2.pm
-/usr/lib/perl5/vendor_perl/5.28.2/Module/Build/PodParser.pm
 
 %files bin
 %defattr(-,root,root,-)
@@ -139,3 +126,29 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 %files man
 %defattr(0644,root,root,0755)
 /usr/share/man/man1/config_data.1
+
+%files perl
+%defattr(-,root,root,-)
+/usr/lib/perl5/vendor_perl/5.30.1/Module/Build.pm
+/usr/lib/perl5/vendor_perl/5.30.1/Module/Build/API.pod
+/usr/lib/perl5/vendor_perl/5.30.1/Module/Build/Authoring.pod
+/usr/lib/perl5/vendor_perl/5.30.1/Module/Build/Base.pm
+/usr/lib/perl5/vendor_perl/5.30.1/Module/Build/Bundling.pod
+/usr/lib/perl5/vendor_perl/5.30.1/Module/Build/Compat.pm
+/usr/lib/perl5/vendor_perl/5.30.1/Module/Build/Config.pm
+/usr/lib/perl5/vendor_perl/5.30.1/Module/Build/ConfigData.pm
+/usr/lib/perl5/vendor_perl/5.30.1/Module/Build/Cookbook.pm
+/usr/lib/perl5/vendor_perl/5.30.1/Module/Build/Dumper.pm
+/usr/lib/perl5/vendor_perl/5.30.1/Module/Build/Notes.pm
+/usr/lib/perl5/vendor_perl/5.30.1/Module/Build/PPMMaker.pm
+/usr/lib/perl5/vendor_perl/5.30.1/Module/Build/Platform/Default.pm
+/usr/lib/perl5/vendor_perl/5.30.1/Module/Build/Platform/MacOS.pm
+/usr/lib/perl5/vendor_perl/5.30.1/Module/Build/Platform/Unix.pm
+/usr/lib/perl5/vendor_perl/5.30.1/Module/Build/Platform/VMS.pm
+/usr/lib/perl5/vendor_perl/5.30.1/Module/Build/Platform/VOS.pm
+/usr/lib/perl5/vendor_perl/5.30.1/Module/Build/Platform/Windows.pm
+/usr/lib/perl5/vendor_perl/5.30.1/Module/Build/Platform/aix.pm
+/usr/lib/perl5/vendor_perl/5.30.1/Module/Build/Platform/cygwin.pm
+/usr/lib/perl5/vendor_perl/5.30.1/Module/Build/Platform/darwin.pm
+/usr/lib/perl5/vendor_perl/5.30.1/Module/Build/Platform/os2.pm
+/usr/lib/perl5/vendor_perl/5.30.1/Module/Build/PodParser.pm
