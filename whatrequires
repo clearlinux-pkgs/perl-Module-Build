@@ -1,4 +1,3 @@
 # This file contains recursive sources that require this package
 perl-Crypt-Eksblowfish
-perl-Data-Serializer
 perl-Module-Runtime
