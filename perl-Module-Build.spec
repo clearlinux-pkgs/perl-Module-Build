@@ -4,7 +4,7 @@
 #
 Name     : perl-Module-Build
 Version  : 0.4231
-Release  : 36
+Release  : 37
 URL      : https://cpan.metacpan.org/authors/id/L/LE/LEONT/Module-Build-0.4231.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/L/LE/LEONT/Module-Build-0.4231.tar.gz
 Summary  : 'Build and install Perl modules'
@@ -129,26 +129,26 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files perl
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.30.2/Module/Build.pm
-/usr/lib/perl5/vendor_perl/5.30.2/Module/Build/API.pod
-/usr/lib/perl5/vendor_perl/5.30.2/Module/Build/Authoring.pod
-/usr/lib/perl5/vendor_perl/5.30.2/Module/Build/Base.pm
-/usr/lib/perl5/vendor_perl/5.30.2/Module/Build/Bundling.pod
-/usr/lib/perl5/vendor_perl/5.30.2/Module/Build/Compat.pm
-/usr/lib/perl5/vendor_perl/5.30.2/Module/Build/Config.pm
-/usr/lib/perl5/vendor_perl/5.30.2/Module/Build/ConfigData.pm
-/usr/lib/perl5/vendor_perl/5.30.2/Module/Build/Cookbook.pm
-/usr/lib/perl5/vendor_perl/5.30.2/Module/Build/Dumper.pm
-/usr/lib/perl5/vendor_perl/5.30.2/Module/Build/Notes.pm
-/usr/lib/perl5/vendor_perl/5.30.2/Module/Build/PPMMaker.pm
-/usr/lib/perl5/vendor_perl/5.30.2/Module/Build/Platform/Default.pm
-/usr/lib/perl5/vendor_perl/5.30.2/Module/Build/Platform/MacOS.pm
-/usr/lib/perl5/vendor_perl/5.30.2/Module/Build/Platform/Unix.pm
-/usr/lib/perl5/vendor_perl/5.30.2/Module/Build/Platform/VMS.pm
-/usr/lib/perl5/vendor_perl/5.30.2/Module/Build/Platform/VOS.pm
-/usr/lib/perl5/vendor_perl/5.30.2/Module/Build/Platform/Windows.pm
-/usr/lib/perl5/vendor_perl/5.30.2/Module/Build/Platform/aix.pm
-/usr/lib/perl5/vendor_perl/5.30.2/Module/Build/Platform/cygwin.pm
-/usr/lib/perl5/vendor_perl/5.30.2/Module/Build/Platform/darwin.pm
-/usr/lib/perl5/vendor_perl/5.30.2/Module/Build/Platform/os2.pm
-/usr/lib/perl5/vendor_perl/5.30.2/Module/Build/PodParser.pm
+/usr/lib/perl5/vendor_perl/5.30.3/Module/Build.pm
+/usr/lib/perl5/vendor_perl/5.30.3/Module/Build/API.pod
+/usr/lib/perl5/vendor_perl/5.30.3/Module/Build/Authoring.pod
+/usr/lib/perl5/vendor_perl/5.30.3/Module/Build/Base.pm
+/usr/lib/perl5/vendor_perl/5.30.3/Module/Build/Bundling.pod
+/usr/lib/perl5/vendor_perl/5.30.3/Module/Build/Compat.pm
+/usr/lib/perl5/vendor_perl/5.30.3/Module/Build/Config.pm
+/usr/lib/perl5/vendor_perl/5.30.3/Module/Build/ConfigData.pm
+/usr/lib/perl5/vendor_perl/5.30.3/Module/Build/Cookbook.pm
+/usr/lib/perl5/vendor_perl/5.30.3/Module/Build/Dumper.pm
+/usr/lib/perl5/vendor_perl/5.30.3/Module/Build/Notes.pm
+/usr/lib/perl5/vendor_perl/5.30.3/Module/Build/PPMMaker.pm
+/usr/lib/perl5/vendor_perl/5.30.3/Module/Build/Platform/Default.pm
+/usr/lib/perl5/vendor_perl/5.30.3/Module/Build/Platform/MacOS.pm
+/usr/lib/perl5/vendor_perl/5.30.3/Module/Build/Platform/Unix.pm
+/usr/lib/perl5/vendor_perl/5.30.3/Module/Build/Platform/VMS.pm
+/usr/lib/perl5/vendor_perl/5.30.3/Module/Build/Platform/VOS.pm
+/usr/lib/perl5/vendor_perl/5.30.3/Module/Build/Platform/Windows.pm
+/usr/lib/perl5/vendor_perl/5.30.3/Module/Build/Platform/aix.pm
+/usr/lib/perl5/vendor_perl/5.30.3/Module/Build/Platform/cygwin.pm
+/usr/lib/perl5/vendor_perl/5.30.3/Module/Build/Platform/darwin.pm
+/usr/lib/perl5/vendor_perl/5.30.3/Module/Build/Platform/os2.pm
+/usr/lib/perl5/vendor_perl/5.30.3/Module/Build/PodParser.pm
