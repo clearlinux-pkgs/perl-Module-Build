@@ -5,13 +5,14 @@
 #
 Name     : perl-Module-Build
 Version  : 0.4234
-Release  : 43
+Release  : 44
 URL      : https://cpan.metacpan.org/authors/id/L/LE/LEONT/Module-Build-0.4234.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/L/LE/LEONT/Module-Build-0.4234.tar.gz
 Summary  : 'Build and install Perl modules'
 Group    : Development/Tools
-License  : Artistic-1.0-Perl
+License  : Artistic-1.0 Artistic-1.0-Perl GPL-1.0
 Requires: perl-Module-Build-bin = %{version}-%{release}
+Requires: perl-Module-Build-license = %{version}-%{release}
 Requires: perl-Module-Build-man = %{version}-%{release}
 Requires: perl-Module-Build-perl = %{version}-%{release}
 BuildRequires : buildreq-cpan
@@ -28,6 +29,7 @@ Standard process for building & installing modules:
 %package bin
 Summary: bin components for the perl-Module-Build package.
 Group: Binaries
+Requires: perl-Module-Build-license = %{version}-%{release}
 
 %description bin
 bin components for the perl-Module-Build package.
@@ -42,6 +44,14 @@ Requires: perl-Module-Build = %{version}-%{release}
 
 %description dev
 dev components for the perl-Module-Build package.
+
+
+%package license
+Summary: license components for the perl-Module-Build package.
+Group: Default
+
+%description license
+license components for the perl-Module-Build package.
 
 
 %package man
@@ -71,7 +81,7 @@ export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
 if test -f Makefile.PL; then
-%{__perl} Makefile.PL
+%{__perl} -I. Makefile.PL
 make  %{?_smp_mflags}
 else
 %{__perl} Build.PL
@@ -87,6 +97,8 @@ make TEST_VERBOSE=1 test || :
 
 %install
 rm -rf %{buildroot}
+mkdir -p %{buildroot}/usr/share/package-licenses/perl-Module-Build
+cp %{_builddir}/Module-Build-%{version}/LICENSE %{buildroot}/usr/share/package-licenses/perl-Module-Build/a23e469359a6c031b131c09d9d352a8c875ecb13 || :
 if test -f Makefile.PL; then
 make pure_install PERL_INSTALL_ROOT=%{buildroot} INSTALLDIRS=vendor
 else
@@ -126,6 +138,10 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 /usr/share/man/man3/Module::Build::Platform::cygwin.3
 /usr/share/man/man3/Module::Build::Platform::darwin.3
 /usr/share/man/man3/Module::Build::Platform::os2.3
+
+%files license
+%defattr(0644,root,root,0755)
+/usr/share/package-licenses/perl-Module-Build/a23e469359a6c031b131c09d9d352a8c875ecb13
 
 %files man
 %defattr(0644,root,root,0755)
