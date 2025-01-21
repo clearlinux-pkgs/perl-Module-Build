@@ -5,7 +5,7 @@
 #
 Name     : perl-Module-Build
 Version  : 0.4234
-Release  : 47
+Release  : 48
 URL      : https://cpan.metacpan.org/authors/id/L/LE/LEONT/Module-Build-0.4234.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/L/LE/LEONT/Module-Build-0.4234.tar.gz
 Summary  : 'Build and install Perl modules'
